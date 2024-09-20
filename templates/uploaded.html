@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Uploaded Successfully</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uploaded.css') }}">
+</head>
+<body>
+    <h1>Image Uploaded Successfully!</h1>
+    <div class="image-container">
+        <!-- templates/uploaded.html -->
+<img src="{{ url_for('static', filename='uploads/' + file_name) }}" alt="Uploaded Image">
+    </div>
+</body>
+</html>
