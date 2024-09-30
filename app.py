@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from werkzeug.utils import secure_filename
 from config import Config
 import os
 from models.image_handler import ImageChecker, ImageSaver
@@ -7,7 +6,6 @@ from models.image_handler import ImageChecker, ImageSaver
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# 确保上传文件夹存在
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 @app.route('/')
